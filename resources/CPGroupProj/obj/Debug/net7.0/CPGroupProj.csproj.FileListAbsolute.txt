@@ -1,0 +1,15 @@
+T:\Semester4\CPGroupProj\bin\Debug\net7.0\CPGroupProj.exe
+T:\Semester4\CPGroupProj\bin\Debug\net7.0\CPGroupProj.deps.json
+T:\Semester4\CPGroupProj\bin\Debug\net7.0\CPGroupProj.runtimeconfig.json
+T:\Semester4\CPGroupProj\bin\Debug\net7.0\CPGroupProj.dll
+T:\Semester4\CPGroupProj\bin\Debug\net7.0\CPGroupProj.pdb
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.csproj.AssemblyReference.cache
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.GeneratedMSBuildEditorConfig.editorconfig
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.AssemblyInfoInputs.cache
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.AssemblyInfo.cs
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.csproj.CoreCompileInputs.cache
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.dll
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\refint\CPGroupProj.dll
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.pdb
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.genruntimeconfig.cache
+T:\Semester4\CPGroupProj\obj\Debug\net7.0\ref\CPGroupProj.dll
