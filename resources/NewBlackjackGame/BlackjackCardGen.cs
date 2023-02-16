@@ -1,0 +1,198 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+
+namespace DeckOfCards
+{
+    class BlackjackCardGen
+    {
+        static void Main(string[] args)
+        {
+            // get num of users
+            Console.WriteLine("Enter the number of players: ");
+            int numberOfPlayers = int.Parse(Console.ReadLine());
+            // add 1 to account for dealer hand
+            numberOfPlayers = numberOfPlayers + 1;
+
+            // create deck using deck class
+            Deck deck = new Deck();
+
+            // shuffle the deck
+            deck.Shuffle();
+
+            // list cards by hand num for num of players entered
+            List<Card>[] hands = deck.Deal(numberOfPlayers);
+
+            // original deal cards which shows all cards dealt in deck for each player
+            //for (int i = 0; i < numberOfPlayers; i++)
+            //{
+            //    Console.WriteLine("Hand " + (i + 1) + ":");
+            //    foreach (Card card in hands[i])
+            //    {
+            //        Console.WriteLine(card.Face + " of " + card.Suit);
+            //    }
+            //    Console.WriteLine();
+            //}
+            //Console.Write("Click any button to view next output");
+            //Console.ReadLine();
+
+            // new deal for blackjack where only two cards are shown
+            // dealer hand = 0, players hands = 1+
+            for (int i = 0; i < numberOfPlayers; i++)
+            {
+                // for dealer hand
+                if (hands[i] == hands[0])
+                {
+                    Console.WriteLine("Dealer hand: ");
+                    foreach (Card card in hands[i].GetRange(0, 2))
+                    {
+                        Console.WriteLine(card.Face + " of " + card.Suit);
+                    }
+                    Console.WriteLine();
+                }
+                // for other players 
+                else
+                {
+                    Console.WriteLine("Player " + (i) + ":");
+                    foreach (Card card in hands[i].GetRange(0, 2))
+                    {
+                        Console.WriteLine(card.Face + " of " + card.Suit);
+                    }
+                    Console.WriteLine();
+                }
+            }
+            Console.Write("Click any button to view next output");
+            Console.ReadLine();
+
+            // last line
+            Console.Write("Click any button to exit");
+            Console.ReadLine();
+        }
+        /* this code can be use to just set it to 6 players, we can use this to connect our lobby */
+        //static void Main(string[] args)
+        //{
+        //    Deck deck = new Deck();
+        //    deck.Shuffle();
+        //    List<Card>[] hands = deck.Deal(6);
+        //    for (int i = 0; i < 6; i++)
+        //    {
+        //        Console.WriteLine("Hand " + (i + 1) + ":");
+        //        foreach (Card card in hands[i])
+        //        {
+        //            Console.WriteLine(card.Face + " of " + card.Suit);
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //    Console.ReadLine();
+        //}
+    }
+
+    // I am enumerating the face values to use in the deck 
+    public enum Face
+    {
+        Ace = 1,
+        Two,
+        Three,
+        Four,
+        Five,
+        Six,
+        Seven,
+        Eight,
+        Nine,
+        Ten,
+        Jack,
+        Queen,
+        King
+    }
+
+    // I am enumerating the suits as well
+    public enum Suit
+    {
+        Clubs,
+        Diamonds,
+        Hearts,
+        Spades
+    }
+
+    // create cards and their values using enum from above
+    public class Card
+    {
+        public Face Face { get; set; }
+        public Suit Suit { get; set; }
+
+        // this lets us use Ace as 11 and 1
+        public int Value
+        {
+            get
+            {
+                if (Face == Face.Ace)
+                {
+                    return 11;
+                }
+                else if (Face >= Face.Ten)
+                {
+                    return 10;
+                }
+                else
+                {
+                    return (int)Face;
+                }
+            }
+        }
+
+        public Card(Face face, Suit suit)
+        {
+            Face = face;
+            Suit = suit;
+        }
+    }
+
+    // deck class - take cards created, add them to the deck
+    // includes shuffle and deal functions
+    public class Deck
+    {
+        private List<Card> _cards;
+
+        public Deck()
+        {
+            _cards = new List<Card>();
+            foreach (Suit suit in Enum.GetValues(typeof(Suit)))
+            {
+                foreach (Face face in Enum.GetValues(typeof(Face)))
+                {
+                    _cards.Add(new Card(face, suit));
+                }
+            }
+        }
+
+        // shuffle deck function
+        public void Shuffle()
+        {
+            Random rng = new Random();
+            int n = _cards.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                Card value = _cards[k];
+                _cards[k] = _cards[n];
+                _cards[n] = value;
+            }
+        }
+
+        // deal function - deals cards based on num of players
+        public List<Card>[] Deal(int numberOfHands)
+        {
+            List<Card>[] hands = new List<Card>[numberOfHands];
+            for (int i = 0; i < numberOfHands; i++)
+            {
+                hands[i] = new List<Card>();
+            }
+            for (int i = 0; i < _cards.Count; i++)
+            {
+                hands[i % numberOfHands].Add(_cards[i]);
+            }
+            return hands;
+        }
+    }
+}
