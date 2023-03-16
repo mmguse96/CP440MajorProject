@@ -24,7 +24,7 @@ namespace BingoGame
 
             if (answer.Equals("y"))
             {
-                GameStart start = new GameStart();  
+               new GameStart();  
             }
             else if(answer.Equals("n")) { Environment.Exit(0); }
 

@@ -11,7 +11,7 @@ namespace BingoGame
         static void Main(string[] args)
         {
            //starts initial game
-            GameStart start = new GameStart();
+            new GameStart();
             
         }
     }

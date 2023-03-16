@@ -155,7 +155,7 @@ namespace BingoGame
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    if (card[i, j].cNumber == cBalls.getCalledBalls())
+                    if (card[i, j].cNumber == cBalls.GetCalledBalls())
                     {
                         Console.WriteLine("true");
                         card[i, j].dabbed = true;
@@ -169,7 +169,7 @@ namespace BingoGame
 
             if (bingo == true )
             {
-                cBalls.callBingo(bingo);
+                cBalls.CallBingo(bingo);
             }
 
         }
