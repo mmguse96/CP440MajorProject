@@ -9,79 +9,160 @@ namespace DeckOfCards
 {
     class BlackjackCardGen
     {
+        
         static void Main(string[] args)
         {
-            // get num of users
-            Console.Write("Enter the number of players: ");
-            int numberOfPlayers = int.Parse(Console.ReadLine());
-            // add 1 to account for dealer hand
-            numberOfPlayers = numberOfPlayers + 1;
-            Console.WriteLine();
+            string restart = "yes";
 
-            // create deck using deck class
-            Deck deck = new Deck();
-
-            // shuffle the deck
-            deck.Shuffle();
-
-            // list cards by hand num for num of players entered
-            List<Card>[] hands = deck.Deal(numberOfPlayers);
-
-            int dealerRange = 1;
-            int playerRange = 2;
-
-            // deal, only two cards are shown for player
-            // only one card shwon for dealer
-            // dealer hand = 0, players hands = 1+
-            for (int i = 0; i < numberOfPlayers; i++)
+            // loop to run game if player wanst to restart
+            while (restart == "yes")
             {
-                // for dealer hand
-                if (hands[i] == hands[0])
+                Console.WriteLine("New game started...");
+
+
+                // get num of users
+                Console.Write("Enter the number of players: ");
+                int numberOfPlayers = int.Parse(Console.ReadLine());
+                // add 1 to account for dealer hand
+                numberOfPlayers = numberOfPlayers + 1;
+                Console.WriteLine();
+
+                // create deck using deck class
+                Deck deck = new Deck();
+
+                // shuffle the deck
+                deck.Shuffle();
+
+                // list cards by hand num for num of players entered
+                List<Card>[] hands = deck.Deal(numberOfPlayers);
+
+                int dealerRange = 1;
+                int playerRange = 2;
+
+                // deal, only two cards are shown for player
+                // only one card shwon for dealer
+                // dealer hand = 0, players hands = 1+
+                for (int i = 0; i < numberOfPlayers; i++)
                 {
-                    Console.WriteLine("Dealer hand: ");
-                    // only shows the frist card the dealer is dealt
-                    foreach (Card card in hands[i].GetRange(0, dealerRange))
+                    // for dealer hand
+                    if (hands[i] == hands[0])
                     {
-                        Console.WriteLine(card.Face + " of " + card.Suit);
+                        Console.WriteLine("Dealer hand: ");
+                        // only shows the frist card the dealer is dealt
+                        foreach (Card card in hands[i].GetRange(0, dealerRange))
+                        {
+                            Console.WriteLine(card.Face + " of " + card.Suit);
+                        }
+                        Console.WriteLine();
                     }
-                    Console.WriteLine();
+                    // for other players 
+                    else
+                    {
+                        Console.WriteLine("Player " + (i) + ":");
+                        // shows both cards player is dealt
+                        foreach (Card card in hands[i].GetRange(0, playerRange))
+                        {
+                            Console.WriteLine(card.Face + " of " + card.Suit);
+                        }
+                        Console.WriteLine();
+                    }
                 }
-                // for other players 
-                else
+
+                for (int i = 1; i < numberOfPlayers; i++)
                 {
-                    Console.WriteLine("Player " + (i) + ":");
-                    // shows both cards player is dealt
-                    foreach (Card card in hands[i].GetRange(0, playerRange))
-                    {
-                        Console.WriteLine(card.Face + " of " + card.Suit);
-                    }
-                    Console.WriteLine();
+                    DetermineDeal dd = new DetermineDeal(hands[0], hands[i], numberOfPlayers, dealerRange, playerRange);
+                }
+
+
+                Console.Write("Play Again? Y for yes or N for no: ");
+                string answer = Console.ReadLine().ToUpper();
+
+                if (answer == "Y")
+                {
+                    Console.WriteLine("Yes Selected. Click any key to restart.");
+                    Console.ReadKey();
+                    restart = "yes";
+                }
+                else if (answer == "N")
+                {
+                    Console.WriteLine("No Selected");
+                    Console.ReadKey();
+                    //save point to player profile
+                    restart = "no";
                 }
             }
 
-            for (int i = 1; i < numberOfPlayers; i++)
-            {
-                DetermineDeal dd = new DetermineDeal(hands[0], hands[i], numberOfPlayers, dealerRange, playerRange);
-            }
+            //// get num of users
+            //Console.Write("Enter the number of players: ");
+            //int numberOfPlayers = int.Parse(Console.ReadLine());
+            //// add 1 to account for dealer hand
+            //numberOfPlayers = numberOfPlayers + 1;
+            //Console.WriteLine();
 
-            Console.Write("Play Again? Y for yes or N for no: ");
-            string ans = Console.ReadLine().ToUpper();
+            //// create deck using deck class
+            //Deck deck = new Deck();
 
-            if (ans == "Y")
-            {
-                Console.WriteLine("Yes Selected. Click any key to restart.");
-                Console.ReadKey();
-                RestartApp reapp = new RestartApp();
-                reapp.Restart = true;
-            }
-            else if (ans == "N")
-            {
-                Console.WriteLine("No Selected");
-                Console.ReadKey();
-                //save point to player profile
-                RestartApp reapp = new RestartApp();
-                reapp.Restart = false;
-            }
+            //// shuffle the deck
+            //deck.Shuffle();
+
+            //// list cards by hand num for num of players entered
+            //List<Card>[] hands = deck.Deal(numberOfPlayers);
+
+            //int dealerRange = 1;
+            //int playerRange = 2;
+
+            //// deal, only two cards are shown for player
+            //// only one card shwon for dealer
+            //// dealer hand = 0, players hands = 1+
+            //for (int i = 0; i < numberOfPlayers; i++)
+            //{
+            //    // for dealer hand
+            //    if (hands[i] == hands[0])
+            //    {
+            //        Console.WriteLine("Dealer hand: ");
+            //        // only shows the frist card the dealer is dealt
+            //        foreach (Card card in hands[i].GetRange(0, dealerRange))
+            //        {
+            //            Console.WriteLine(card.Face + " of " + card.Suit);
+            //        }
+            //        Console.WriteLine();
+            //    }
+            //    // for other players 
+            //    else
+            //    {
+            //        Console.WriteLine("Player " + (i) + ":");
+            //        // shows both cards player is dealt
+            //        foreach (Card card in hands[i].GetRange(0, playerRange))
+            //        {
+            //            Console.WriteLine(card.Face + " of " + card.Suit);
+            //        }
+            //        Console.WriteLine();
+            //    }
+            //}
+
+            //for (int i = 1; i < numberOfPlayers; i++)
+            //{
+            //    DetermineDeal dd = new DetermineDeal(hands[0], hands[i], numberOfPlayers, dealerRange, playerRange);
+            //}
+
+            //Console.Write("Play Again? Y for yes or N for no: ");
+            //string ans = Console.ReadLine().ToUpper();
+
+            //if (ans == "Y")
+            //{
+            //    Console.WriteLine("Yes Selected. Click any key to restart.");
+            //    Console.ReadKey();
+            //    RestartApp reapp = new RestartApp();
+            //    reapp.Restart = true;
+            //}
+            //else if (ans == "N")
+            //{
+            //    Console.WriteLine("No Selected");
+            //    Console.ReadKey();
+            //    //save point to player profile
+            //    RestartApp reapp = new RestartApp();
+            //    reapp.Restart = false;
+            //}
 
             //PlayAgain pa = new PlayAgain(restart);
 
@@ -448,7 +529,7 @@ namespace DeckOfCards
                 dealerRange = 2;
             }
 
-            Console.WriteLine("Dealer hand: ");
+        Console.WriteLine("Dealer hand: ");
             // shows first two dealer cards
             foreach (Card card in dealerHand.GetRange(0, dealerRange))
             {
@@ -458,11 +539,16 @@ namespace DeckOfCards
             Console.WriteLine("Dealer value: " + sumOfDealerHand);
             Console.WriteLine();
 
-            while (sumOfDealerHand < 17)
+            while (sumOfDealerHand < 17) // ****************************************************
             {
-                DealerHit(dealerHand, playerHand, numPlayers, dealerRange, playerRange);
-            }
+                int newSum = DealerHit(dealerHand, playerHand, numPlayers, dealerRange, playerRange);
 
+                if (newSum >= 17)
+                {
+                    sumOfDealerHand = newSum;
+                    break;
+                }
+            }
             if (sumOfDealerHand >= 17)
             {
                 //see what to do based on dealer card count
@@ -493,7 +579,7 @@ namespace DeckOfCards
             }
         } // end of reveal dealer cards
 
-        public void DealerHit(List<Card> dealerHand, List<Card> playerHand, int numPlayers, int dealerRange, int playerRange)
+        public int DealerHit(List<Card> dealerHand, List<Card> playerHand, int numPlayers, int dealerRange, int playerRange)
         {
             int sumOfDealerHand = 0;
             dealerRange++;
@@ -505,7 +591,7 @@ namespace DeckOfCards
                 sumOfDealerHand += card.Value;
             }
 
-            //assign card to player hand
+            //assign card to player hand *********************************
             for (int i = 1; i < numPlayers; i++)
             {
                 Console.WriteLine("Dealer cards:");
@@ -516,6 +602,7 @@ namespace DeckOfCards
                 Console.WriteLine("Value of dealer hand: " + sumOfDealerHand);
                 Console.WriteLine();
             }
+            return sumOfDealerHand;
         } // end of dealerhit
     } // end of revealdealercards class
 
@@ -548,36 +635,36 @@ namespace DeckOfCards
         }
     } // end of winloss class
 
-    class RestartApp
-    {
-        private bool restart = false;
-        public bool Restart
-        {
-            get { return restart; }
-            set { restart = value; }
-        }
-    }
-    public class PlayAgain
-    {
-        public PlayAgain(bool restart)
-        {
-            Console.Write("Play Again? Y for yes or N for no: ");
-            string ans = Console.ReadLine().ToUpper();
+    //class Restart
+    //{
+    //    private bool restart = false;
+    //    public bool Restart
+    //    {
+    //        get { return restart; }
+    //        set { restart = value; }
+    //    }
+    //}
+    //public class PlayAgain
+    //{
+    //    public PlayAgain(bool restart)
+    //    {
+    //        Console.Write("Play Again? Y for yes or N for no: ");
+    //        string ans = Console.ReadLine().ToUpper();
 
-            if (ans == "Y")
-            {
-                Console.WriteLine("Yes Selected. Click any key to restart.");
-                Console.ReadKey();
-                restart = true;
-            }
-            else if (ans == "N")
-            {
-                Console.WriteLine("No Selected");
-                Console.ReadKey();
-                //save point to player profile
-                restart = false;
-            }
-        }
+    //        if (ans == "Y")
+    //        {
+    //            Console.WriteLine("Yes Selected. Click any key to restart.");
+    //            Console.ReadKey();
+    //            restart = true;
+    //        }
+    //        else if (ans == "N")
+    //        {
+    //            Console.WriteLine("No Selected");
+    //            Console.ReadKey();
+    //            //save point to player profile
+    //            restart = false;
+    //        }
+    //    }
  
-    } // end of playagain class
+    //} // end of playagain class
 } // end of namespace

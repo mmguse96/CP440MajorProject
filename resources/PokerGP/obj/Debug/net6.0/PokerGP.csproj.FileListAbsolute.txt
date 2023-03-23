@@ -13,3 +13,18 @@ T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\refint\PokerGP.dll
 T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.pdb
 T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.genruntimeconfig.cache
 T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\ref\PokerGP.dll
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\bin\Debug\net6.0\PokerGP.exe
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\bin\Debug\net6.0\PokerGP.deps.json
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\bin\Debug\net6.0\PokerGP.runtimeconfig.json
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\bin\Debug\net6.0\PokerGP.dll
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\bin\Debug\net6.0\PokerGP.pdb
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\PokerGP.csproj.AssemblyReference.cache
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\PokerGP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\PokerGP.AssemblyInfoInputs.cache
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\PokerGP.AssemblyInfo.cs
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\PokerGP.csproj.CoreCompileInputs.cache
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\PokerGP.dll
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\refint\PokerGP.dll
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\PokerGP.pdb
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\PokerGP.genruntimeconfig.cache
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\PokerGP\obj\Debug\net6.0\ref\PokerGP.dll

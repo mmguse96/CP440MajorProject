@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Jarvis\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\kkemp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "T:\\GroupProject\\NewPoker\\PokerGP\\PokerGP.csproj",
+      "projectUniqueName": "C:\\Users\\kkemp\\OneDrive\\Desktop\\CP440 - Major Proj\\CP440MajorProject\\resources\\PokerGP\\PokerGP.csproj",
       "projectName": "PokerGP",
-      "projectPath": "T:\\GroupProject\\NewPoker\\PokerGP\\PokerGP.csproj",
-      "packagesPath": "C:\\Users\\Jarvis\\.nuget\\packages\\",
-      "outputPath": "T:\\GroupProject\\NewPoker\\PokerGP\\obj\\",
+      "projectPath": "C:\\Users\\kkemp\\OneDrive\\Desktop\\CP440 - Major Proj\\CP440MajorProject\\resources\\PokerGP\\PokerGP.csproj",
+      "packagesPath": "C:\\Users\\kkemp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kkemp\\OneDrive\\Desktop\\CP440 - Major Proj\\CP440MajorProject\\resources\\PokerGP\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Jarvis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\kkemp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
