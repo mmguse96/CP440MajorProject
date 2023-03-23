@@ -3,9 +3,9 @@
     "",
     "\\resources",
     "\\resources\\Bingo Card generation algorithm",
-    "\\resources\\BlackjackGameConsoleApp",
-    "\\resources\\CPGroupProj"
+    "\\resources\\CPGroupProj",
+    "\\resources\\NewBlackjackGame"
   ],
-  "SelectedNode": "\\resources",
+  "SelectedNode": "\\resources\\NewBlackjackGame\\BlackjackCardGen.cs",
   "PreviewInSolutionExplorer": false
 }
