@@ -13,3 +13,6 @@ T:\Semester4\CPGroupProj\obj\Debug\net7.0\refint\CPGroupProj.dll
 T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.pdb
 T:\Semester4\CPGroupProj\obj\Debug\net7.0\CPGroupProj.genruntimeconfig.cache
 T:\Semester4\CPGroupProj\obj\Debug\net7.0\ref\CPGroupProj.dll
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\CPGroupProj\obj\Debug\net7.0\CPGroupProj.dll
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\CPGroupProj\obj\Debug\net7.0\refint\CPGroupProj.dll
+C:\Users\kkemp\OneDrive\Desktop\CP440 - Major Proj\CP440MajorProject\resources\CPGroupProj\obj\Debug\net7.0\CPGroupProj.pdb
