@@ -1,0 +1,15 @@
+T:\GroupProject\NewPoker\PokerGP\bin\Debug\net6.0\PokerGP.exe
+T:\GroupProject\NewPoker\PokerGP\bin\Debug\net6.0\PokerGP.deps.json
+T:\GroupProject\NewPoker\PokerGP\bin\Debug\net6.0\PokerGP.runtimeconfig.json
+T:\GroupProject\NewPoker\PokerGP\bin\Debug\net6.0\PokerGP.dll
+T:\GroupProject\NewPoker\PokerGP\bin\Debug\net6.0\PokerGP.pdb
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.csproj.AssemblyReference.cache
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.GeneratedMSBuildEditorConfig.editorconfig
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.AssemblyInfoInputs.cache
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.AssemblyInfo.cs
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.csproj.CoreCompileInputs.cache
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.dll
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\refint\PokerGP.dll
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.pdb
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\PokerGP.genruntimeconfig.cache
+T:\GroupProject\NewPoker\PokerGP\obj\Debug\net6.0\ref\PokerGP.dll
